@@ -1,0 +1,32 @@
+const Discord = require("discord.js");
+
+exports.run = async (client, message, args) => {
+message.delete();
+const content = args.join(" ");
+
+if (!args[0]) {
+  return message.channel.send(`${message.author.username}, escreva a sugestão após o comando`)
+} else if (content.length > 1000) {
+  return message.channel.send(`${message.author.username}, forneça uma sugestão de no máximo 1000 caracteres.`);
+} else {
+  var canal = message.guild.channels.cache.find(ch => ch.id === "1002785196174753974");
+
+  
+  const msg = await canal.send(
+    new Discord.MessageEmbed()
+    .setColor("#220f8a")
+    .setAuthor(message.member.user.tag, message.member.user.displayAvatarURL() )
+    .addField("Autor:", message.author)
+    .addField("📝 Sugestão enviada:", content)
+    .setFooter("ID do Autor: " + message.author.id)
+    .setTimestamp()
+  );
+  
+
+  const emojis = ["✅", "❌"];
+
+  for (const i in emojis) {
+    await msg.react(emojis[i])
+  }
+}
+}

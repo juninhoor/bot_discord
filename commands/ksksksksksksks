@@ -1,0 +1,16 @@
+const Discord = require('discord.js');
+
+module.exports.run = async (client, message, args) => {
+  const sayMessage = args.join(' ');
+  message.channel.send("👍");
+ 
+  
+  const emojis = ["✅", "👍", "❌"];
+
+  for (const i in emojis) {
+    await msg.react(emojis[i])
+  }
+};
+
+
+ 

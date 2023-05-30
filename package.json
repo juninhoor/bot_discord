@@ -1,0 +1,30 @@
+{
+  "name": "DENUN-CHARI",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.3.5",
+    "cheerio": "^1.0.0-rc.12",
+    "date-fns": "^2.29.3",
+    "date-fns-tz": "^2.0.0",
+    "discord-rich-presence": "0.0.8",
+    "discord.js": "^12.5.1",
+    "discord.js-buttons": "^1.0.0",
+    "dotenv": "^16.0.3",
+    "exceljs": "^4.3.0",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "leaguejs": "^2.3.1",
+    "moment-timezone": "^0.5.43",
+    "node-fetch": "^3.3.1",
+    "request": "^2.88.2",
+    "riotapi": "^2.0.0"
+  }
+}
